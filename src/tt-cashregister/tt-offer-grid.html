@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="tt-offer-grid">
+
+    <!-- Defines the element's style and local DOM -->
+    <template>
+        <style>
+            :host {
+                display: block;
+                padding: 16px;
+            }
+        </style>
+
+        <div id="scrollable-element" style="overflow: auto;">
+            <iron-list items="[[offers]]" as="offer"  scroll-target="scrollable-element" grid>
+
+                <div style="width: 100px; height: 100px;"> 100x100 [[offer.name]] </div>
+            </iron-list>
+        </div>
+    </template>
+
+    <!-- Creates the element's prototype and registers it -->
+    <script>
+        Polymer({
+            is: 'tt-offer-grid',
+            properties: {
+                offers: {
+                    type: Array,
+                    value: function () {
+                        return [
+                            {"name": "Bob"},
+                            {"name": "Tim"},
+                            {"name": "Mike"}
+                        ];
+                    }
+                }
+            }
+        });
+    </script>
+
+</dom-module>
