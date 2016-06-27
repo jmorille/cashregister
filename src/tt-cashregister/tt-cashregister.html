@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="tt-cashregister">
+
+    <!-- Defines the element's style and local DOM -->
+    <template>
+        <style>
+            :host {
+                display: block;
+                padding: 16px;
+            }
+        </style>
+
+        <h1>Cash view</h1>
+
+        <paper-listbox>
+            <paper-item>Item 1</paper-item>
+            <paper-item>Item 2</paper-item>
+        </paper-listbox>
+
+    </template>
+
+    <!-- Creates the element's prototype and registers it -->
+    <script>
+        Polymer({
+            is: 'tt-cashregister',
+            properties: {
+                route: Object
+            }
+        });
+    </script>
+
+</dom-module>
