@@ -14,8 +14,9 @@
 
         <div id="scrollable-element" style="overflow: auto;">
             <iron-list items="[[offers]]" as="offer"  scroll-target="scrollable-element" grid>
-
-                <div style="width: 100px; height: 100px;"> 100x100 [[offer.name]] </div>
+                <div tabindex$="[[tabIndex]]">
+                    Name: [[offer.name]]
+                </div> 
             </iron-list>
         </div>
     </template>
