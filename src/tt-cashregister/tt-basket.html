@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="tt-basket">
+
+    <!-- Defines the element's style and local DOM -->
+    <template>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout);
+                @apply(--paper-font-common-base);
+            }
+
+            .scrollable-element {
+                @apply(--layout-scroll);
+                @apply(--layout-flex);
+            }
+
+
+        </style>
+
+        <div id="scrollable-element" class="scrollable-element"  ">
+        <iron-list items="[[offers]]" as="photo" scroll-target="scrollable-element" grid>
+            <template>
+                <div class="photoContainer">
+                    <div class="photoContent" tabindex$="[[tabIndex]]">
+                        <iron-image sizing="cover"
+                                    src="//farm[[photo.farm]].staticflickr.com/[[photo.server]]/[[photo.id]]_[[photo.secret]]_n.jpg">
+                        </iron-image>
+                        <div class="detail">[[photo.title]]</div>
+                    </div>
+                </div>
+            </template>
+        </iron-list>
+        </div>
+
+    </template>
+
+    <!-- Creates the element's prototype and registers it -->
+    <script>
+        Polymer({
+            is: 'tt-basket',
+            properties: {
+                offer: {
+                    type: Array,
+                    value: function () {
+                        return [
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"}
+                        ];
+                    }
+                }
+            }
+        });
+    </script>
+
+</dom-module>

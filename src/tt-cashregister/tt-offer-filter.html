@@ -1,9 +1,6 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<link rel="import" href="tt-cashregister/tt-cashregister.html">
-
-
-<dom-module id="my-new-view">
+<dom-module id="tt-offer-filter">
 
     <!-- Defines the element's style and local DOM -->
     <template>
@@ -13,13 +10,18 @@
                 padding: 16px;
             }
         </style>
-        <tt-cashregister></tt-cashregister>
+
+        <paper-listbox>
+            <paper-item>Item 1</paper-item>
+            <paper-item>Item 2</paper-item>
+        </paper-listbox>
+
     </template>
 
     <!-- Creates the element's prototype and registers it -->
     <script>
         Polymer({
-            is: 'my-new-view',
+            is: 'tt-offer-filter',
             properties: {
                 route: Object
             }
