@@ -26,10 +26,6 @@
                 margin: 8px;
             }
 
-            .photoContent:hover .detail {
-                opacity: 1;
-            }
-
             .photoContent > iron-image {
                 @apply(--layout-flex);
             }
@@ -44,13 +40,11 @@
                 font-size: 20px;
                 font-weight: 100;
                 padding: 20px;
-                opacity: 0;
-                transition: opacity 0.1s;
             }
 
             @media (max-width: 800px) {
                 .photoContainer {
-                    width: calc(50% - 16px);
+                    width: auto;
                 }
 
                 .photoContent {

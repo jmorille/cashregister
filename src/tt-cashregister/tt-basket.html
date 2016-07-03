@@ -16,18 +16,30 @@
                 @apply(--layout-scroll);
                 @apply(--layout-flex);
             }
+            .photoContent {
+                @apply(--layout);
+                background-color: #ddd;
+                position: relative;
+                width: auto;
+                height: 40px;
+                margin: 8px;
+            }
+
+            .photoContent > .detail {
+                font-size: 20px;
+                font-weight: 100;
+            }
+
 
 
         </style>
 
+        <h1>Coucou</h1>
         <div id="scrollable-element" class="scrollable-element"  ">
-        <iron-list items="[[offers]]" as="photo" scroll-target="scrollable-element" grid>
+        <iron-list items="[[offers]]" as="photo" scroll-target="scrollable-element">
             <template>
                 <div class="photoContainer">
                     <div class="photoContent" tabindex$="[[tabIndex]]">
-                        <iron-image sizing="cover"
-                                    src="//farm[[photo.farm]].staticflickr.com/[[photo.server]]/[[photo.id]]_[[photo.secret]]_n.jpg">
-                        </iron-image>
                         <div class="detail">[[photo.title]]</div>
                     </div>
                 </div>
@@ -42,11 +54,109 @@
         Polymer({
             is: 'tt-basket',
             properties: {
-                offer: {
+                offers: {
                     type: Array,
                     value: function () {
                         return [
-                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"}
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Bob"}, {"title": "Tim"}, {"title": "Bob"},
+                            {"title": "Mike"}, {"title": "Tim"}, {"title": "Bob"}
                         ];
                     }
                 }
